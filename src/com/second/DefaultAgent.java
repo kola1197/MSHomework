@@ -27,7 +27,7 @@ public class DefaultAgent extends Agent {
         this.linkedAgents = linkGraph.get(id - 1);
         this.neighboringNodes = new HashMap<>();
         this.receivedContent = 0.0;
-        this.sharingValue = 5.0;//(double) id;
+        this.sharingValue = (double) id;
 
         System.out.println("Agent #" + id);
 

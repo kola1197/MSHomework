@@ -58,8 +58,6 @@ public class FindAverage extends TickerBehaviour {
                 }
             }
         }
-        // for testing
-//        System.out.println("receivedContent: " + currentAgent.receivedContent + " id: " + currentAgent.id);
 
         currentAgent.receivedContent.forEach((k, v) -> {
             if (!currentAgent.map.containsKey(k)) {
@@ -67,8 +65,7 @@ public class FindAverage extends TickerBehaviour {
                 currentAgent.sharingMap.put(k, v);
             }
         });
-        // for testing
-//        System.out.println("sharingMap:  " + currentAgent.sharingMap + " id: " + currentAgent.id);
+
 
         if (currentAgent.sharingMap.size() == 0){
             try {
