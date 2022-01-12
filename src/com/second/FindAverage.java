@@ -13,6 +13,8 @@ public class FindAverage extends TickerBehaviour {
         this.agent = agent;
     }
 
+    private final double brokeProbability = 0.5;
+
     @Override
     protected void onTick() {
         DefaultAgent currentAgent = this.agent;
@@ -42,7 +44,7 @@ public class FindAverage extends TickerBehaviour {
                     AID agentSender = msgRes.getSender();
 
                     // probability of flash link between 3 and 4: 40 %
-                    if (Math.random() < 0.4 &&
+                    if (Math.random() < brokeProbability &&
                             (agentSender.getLocalName().equals("4") && currentAgent.id.equals("3") ||
                                     agentSender.getLocalName().equals("3") && currentAgent.id.equals("4"))) {
                         currentAgent.neighboringNodes.put(agentSender, 0.0);
